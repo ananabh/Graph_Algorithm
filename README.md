@@ -17,29 +17,29 @@ If you want to use the algorithms in your code it is as simple as:
 
 ```python
 
-		from Graph_Algorithm import Adjacency_Matrix,Breadth_First,Depth_First
-		import numpy as np
+from Graph_Algorithm import Adjacency_Matrix,Breadth_First,Depth_First
+import numpy as np
 
-		g=Adjacency_Matrix(9,directed=True)
-		g.add_edge(0,1)
-		g.add_edge(1,2)
-		g.add_edge(2,7)
-		g.add_edge(2,4)
-		g.add_edge(2,3)
-		g.add_edge(1,5)
-		g.add_edge(5,6)
-		g.add_edge(6,3)
-		g.add_edge(3,4)
-		g.add_edge(6,8)
+g=Adjacency_Matrix(9,directed=True)
+g.add_edge(0,1)
+g.add_edge(1,2)
+g.add_edge(2,7)
+g.add_edge(2,4)
+g.add_edge(2,3)
+g.add_edge(1,5)
+g.add_edge(5,6)
+g.add_edge(6,3)
+g.add_edge(3,4)
+g.add_edge(6,8)
 
-		for i in range(9):
-    		    print("Adjacent to :",i,g.get_adjacent_vertices(i))
+for i in range(9):
+	print("Adjacent to :",i,g.get_adjacent_vertices(i))
 				
-		g.display()
+g.display()
 
-		Breadth_First.search(g,1) # For BFS
-		visited = np.zeros(g.numVertices)
-		Depth_First.search(g,visited,1) # For DFS
+Breadth_First.search(g,1) # For BFS
+visited = np.zeros(g.numVertices)
+Depth_First.search(g,visited,1) # For DFS
 ```
 Contributing:
 -------------
