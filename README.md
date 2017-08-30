@@ -14,6 +14,8 @@ You should totally check out the Demo for implementation details.
 Usage
 -----
 If you want to use the algorithms in your code it is as simple as:
+
+For BFS
 ::
 
 		from Graph_Algorithm import Adjacency_Matrix,Breadth_First
@@ -37,6 +39,31 @@ If you want to use the algorithms in your code it is as simple as:
 
 		Breadth_First.search(g,0)
 		
+For DFS
+::	
+
+		from Graph_Algorithm import Adjacency_Matrix,Depth_First
+		import numpy as np
+
+		g=Adjacency_Matrix(9)
+		g.add_edge(0,1)
+		g.add_edge(1,2)
+		g.add_edge(2,7)
+		g.add_edge(2,4)
+		g.add_edge(2,3)
+		g.add_edge(1,5)
+		g.add_edge(5,6)
+		g.add_edge(6,3)
+		g.add_edge(3,4)
+		g.add_edge(6,8)
+
+		for i in range(9):
+		    print("Adjacent to :",i,g.get_adjacent_vertices(i))
+		
+		g.display()
+		visited = np.zeros(g.numVertices)
+		Depth_First.search(g,visited,1)
+
 Contributing:
 -------------
 
