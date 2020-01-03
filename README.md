@@ -44,4 +44,4 @@ Depth_First.search(g,visited,1) # For DFS
 Contributing:
 -------------
 
-Contributions are always welcome.
+Some codes and idea taken from various internet sources. Contributions are always welcome. 
